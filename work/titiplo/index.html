@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TITIPLO case study by Bayu Adjie Rossena — a mobile-first SaaS operating system for jastip businesses.">
+  <meta name="theme-color" content="#07090d">
+  <title>TITIPLO Case Study — Bayu Adjie Rossena</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../case-study.css">
+</head>
+<body>
+  <div class="topbar"><div class="wrap"><a class="back" href="../../index.html#work">← Back to selected work</a><span class="case-id">CASE STUDY / 01</span></div></div>
+  <main>
+    <section class="hero wrap reveal">
+      <span class="eyebrow">SaaS · Product Design · Operations</span>
+      <h1><span>TITIPLO</span></h1>
+      <div class="hero-grid">
+        <p class="hero-lead">A mobile-first operating system designed to help jastip sellers manage trips, products, buyers, orders, payments, and recurring business workflows from one place.</p>
+        <div class="meta">
+          <div><span>Role</span><strong>Product / Operations / Build</strong></div>
+          <div><span>Platform</span><strong>Seller App + Buyer Storefront</strong></div>
+          <div><span>Architecture</span><strong>Serverless</strong></div>
+          <div><span>Status</span><strong>Released & iterating</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="showcase wrap reveal">
+      <div class="device-stage">
+        <div class="browser">
+          <div class="browser-head"><i></i><i></i><i></i></div>
+          <div class="browser-body">
+            <aside class="side"><b></b><span></span><span></span><span></span><span></span></aside>
+            <div class="screen">
+              <div class="screen-top"><div class="screen-title"></div><div class="screen-btn"></div></div>
+              <div class="kpis"><b></b><b></b><b></b></div>
+              <div class="panels"><span></span><span></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="phone"><div class="phone-ui"><b></b><span></span><span></span><span></span></div></div>
+      </div>
+    </section>
+
+    <section class="section"><div class="wrap">
+      <div class="section-head reveal"><div class="section-no">01 — THE PROBLEM</div><div><h2>A business model built on trust, but operated through fragmented tools.</h2><p class="section-copy">Jastip sellers often coordinate trips, product availability, customer requests, payment proof, purchase progress, and shipping through chat plus spreadsheets. That works at small scale, but the operational load grows quickly.</p></div></div>
+      <div class="problem-grid">
+        <div class="card reveal"><span>FRICTION 01</span><h3>Scattered order context</h3><p>Important information can live across multiple conversations and manual records.</p></div>
+        <div class="card reveal"><span>FRICTION 02</span><h3>Manual status updates</h3><p>Seller and buyer visibility can depend on repeated chat updates instead of a shared flow.</p></div>
+        <div class="card reveal"><span>FRICTION 03</span><h3>Hard to scale trust</h3><p>A public-facing product needs clearer structure, status, and transaction evidence than a close-circle jastip workflow.</p></div>
+      </div>
+    </div></section>
+
+    <section class="section"><div class="wrap">
+      <div class="section-head reveal"><div class="section-no">02 — PRODUCT PRINCIPLE</div><div><h2>Do not replace the jastiper. Make the jastiper easier to trust and easier to operate.</h2><p class="section-copy">The product direction was intentionally seller-first. The platform had to preserve the personal nature of jastip while reducing administrative friction and giving buyers a clearer storefront and order journey.</p></div></div>
+      <div class="decision-grid">
+        <div class="card reveal"><span>PRINCIPLE</span><h3>Mobile first</h3><p>The seller workflow is designed around a phone, because the business happens while sellers are moving, sourcing, and communicating.</p></div>
+        <div class="card reveal"><span>PRINCIPLE</span><h3>Minimal infrastructure</h3><p>Use lightweight serverless components to keep the product inexpensive to operate and simple to evolve.</p></div>
+        <div class="card reveal"><span>PRINCIPLE</span><h3>Guided workflow</h3><p>Status, actions, and navigation should reduce the amount of business logic the seller has to remember manually.</p></div>
+      </div>
+    </div></section>
+
+    <section class="section"><div class="wrap">
+      <div class="section-head reveal"><div class="section-no">03 — ARCHITECTURE</div><div><h2>Lean infrastructure with clear ownership of each job.</h2><p class="section-copy">The system separates the interface, business logic, structured data, and uploaded proof files so each layer stays understandable.</p></div></div>
+      <div class="arch reveal">
+        <div class="arch-row"><div class="arch-node">Seller App</div><div class="arch-arrow">→</div><div class="arch-node">Cloudflare Worker</div><div class="arch-arrow">→</div><div class="arch-node">D1 Database</div></div>
+        <div class="arch-row" style="margin-top:12px"><div class="arch-node">Buyer Storefront</div><div class="arch-arrow">→</div><div class="arch-node">Business Logic</div><div class="arch-arrow">→</div><div class="arch-node">Google Drive Proof Storage</div></div>
+        <p class="arch-note">The goal was not maximum technical complexity. The goal was an architecture that could support a real product while keeping cost and maintenance manageable.</p>
+      </div>
+    </div></section>
+
+    <section class="section"><div class="wrap">
+      <div class="section-head reveal"><div class="section-no">04 — CORE FLOWS</div><div><h2>Two experiences, one shared transaction state.</h2><p class="section-copy">The seller side focuses on operational control. The buyer side focuses on confidence, visibility, and a simpler purchase journey.</p></div></div>
+      <div class="flow-grid">
+        <div class="flow-column reveal"><h3>Seller flow</h3>
+          <div class="step"><div class="step-no">1</div><div><strong>Create trip</strong><p>Define destination, currency, schedule, and selling context.</p></div></div>
+          <div class="step"><div class="step-no">2</div><div><strong>Add products</strong><p>Manage pricing, markup, images, and availability per trip.</p></div></div>
+          <div class="step"><div class="step-no">3</div><div><strong>Manage orders</strong><p>Track customers, order items, proof of payment, and seller actions.</p></div></div>
+          <div class="step"><div class="step-no">4</div><div><strong>Purchase & handoff</strong><p>Move the transaction through purchase and shipping or hand-carry completion.</p></div></div>
+        </div>
+        <div class="flow-column reveal"><h3>Buyer flow</h3>
+          <div class="step"><div class="step-no">1</div><div><strong>Browse storefront</strong><p>Discover available trip products from a public buyer-facing experience.</p></div></div>
+          <div class="step"><div class="step-no">2</div><div><strong>Place order</strong><p>Submit item selection with clearer structure than a chat-only request.</p></div></div>
+          <div class="step"><div class="step-no">3</div><div><strong>Submit payment proof</strong><p>Attach transaction evidence to the same order context.</p></div></div>
+          <div class="step"><div class="step-no">4</div><div><strong>Follow progress</strong><p>See transaction updates without relying entirely on manual seller messages.</p></div></div>
+        </div>
+      </div>
+    </div></section>
+
+    <section class="section"><div class="wrap">
+      <div class="section-head reveal"><div class="section-no">05 — ITERATION</div><div><h2>The product improved through operational details, not only visual polish.</h2><p class="section-copy">A large part of the work was refining behavior after using the product: navigation, loading states, seller actions, payment flows, notification destinations, account settings, and subscription infrastructure.</p></div></div>
+      <div class="timeline">
+        <div class="timeline-item reveal"><h3>Seller workflow foundation</h3><p>Trips, products, customers, orders, purchase, shipping, and file-proof handling.</p></div>
+        <div class="timeline-item reveal"><h3>Buyer storefront</h3><p>A separate buyer-facing experience connected to the seller's operational data.</p></div>
+        <div class="timeline-item reveal"><h3>Identity & account layer</h3><p>Login, registration, OTP verification, password reset, seller account settings, and session behavior.</p></div>
+        <div class="timeline-item reveal"><h3>Subscription layer</h3><p>Free-plan logic, upgrade flows, subscription history, and manual-payment-ready infrastructure.</p></div>
+        <div class="timeline-item reveal"><h3>Release polish</h3><p>Navigation behavior, loading feedback, sticky headers, button interaction states, and removal of internal technical messaging from the user experience.</p></div>
+      </div>
+    </div></section>
+
+    <section class="section"><div class="wrap">
+      <div class="outcome reveal">
+        <span class="eyebrow">OUTCOME</span>
+        <h2>A working product system instead of a portfolio-only concept.</h2>
+        <p>TITIPLO became a practical exercise in combining product thinking, operations knowledge, UX decisions, backend architecture, mobile behavior, and cost constraints into one evolving SaaS product.</p>
+        <div class="tags"><span>Cloudflare Workers</span><span>D1</span><span>Android</span><span>JavaScript</span><span>Google Drive</span><span>Authentication</span><span>Subscriptions</span><span>Product Design</span></div>
+      </div>
+    </div></section>
+
+    <section class="next"><div class="wrap"><a href="../../index.html#work"><span>BACK TO PORTFOLIO</span><strong>Explore other work →</strong></a></div></section>
+  </main>
+  <footer class="wrap">© 2026 Bayu Adjie Rossena · TITIPLO Case Study</footer>
+  <script>
+    const o=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');o.unobserve(x.target)}}),{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(x=>o.observe(x));
+  </script>
+</body>
+</html>
