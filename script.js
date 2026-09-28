@@ -56,31 +56,55 @@ const observer = new IntersectionObserver(entries => {
 },{threshold:.12});
 document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
 
+document.querySelectorAll(".spotlight").forEach(card => {
+  card.addEventListener("pointermove", e => {
+    const r = card.getBoundingClientRect();
+    card.style.setProperty("--mx", `${e.clientX-r.left}px`);
+    card.style.setProperty("--my", `${e.clientY-r.top}px`);
+  });
+});
+
+const tilt = document.querySelector(".tilt-card");
+if (tilt && matchMedia("(pointer:fine)").matches) {
+  tilt.addEventListener("pointermove", e => {
+    const r = tilt.getBoundingClientRect();
+    const x = (e.clientX-r.left)/r.width-.5;
+    const y = (e.clientY-r.top)/r.height-.5;
+    tilt.style.transform = `rotateY(${x*8}deg) rotateX(${-y*8}deg) rotate(2deg)`;
+  });
+  tilt.addEventListener("pointerleave",()=> {
+    tilt.style.transform = "rotate(4deg)";
+  });
+}
+
 const dialog = document.querySelector("#case-dialog");
-const dialogTitle = document.querySelector("#dialog-title");
-const dialogKicker = document.querySelector("#dialog-kicker");
-const dialogIntro = document.querySelector("#dialog-intro");
-const dialogProblem = document.querySelector("#dialog-problem");
-const dialogApproach = document.querySelector("#dialog-approach");
-const dialogOutcome = document.querySelector("#dialog-outcome");
-const dialogStack = document.querySelector("#dialog-stack");
+const fields = {
+  title: document.querySelector("#dialog-title"),
+  kicker: document.querySelector("#dialog-kicker"),
+  intro: document.querySelector("#dialog-intro"),
+  problem: document.querySelector("#dialog-problem"),
+  approach: document.querySelector("#dialog-approach"),
+  outcome: document.querySelector("#dialog-outcome"),
+  stack: document.querySelector("#dialog-stack")
+};
 
 document.querySelectorAll(".project-open").forEach(btn => {
   btn.addEventListener("click", () => {
     const data = projectData[btn.dataset.project];
-    dialogKicker.textContent = data.kicker;
-    dialogTitle.textContent = data.title;
-    dialogIntro.textContent = data.intro;
-    dialogProblem.textContent = data.problem;
-    dialogApproach.textContent = data.approach;
-    dialogOutcome.textContent = data.outcome;
-    dialogStack.innerHTML = data.stack.map(item => `<span>${item}</span>`).join("");
+    fields.kicker.textContent = data.kicker;
+    fields.title.textContent = data.title;
+    fields.intro.textContent = data.intro;
+    fields.problem.textContent = data.problem;
+    fields.approach.textContent = data.approach;
+    fields.outcome.textContent = data.outcome;
+    fields.stack.innerHTML = data.stack.map(item => `<span>${item}</span>`).join("");
     dialog.showModal();
   });
 });
 
 document.querySelector(".dialog-close").addEventListener("click",()=>dialog.close());
 dialog.addEventListener("click",e=>{ if(e.target===dialog) dialog.close(); });
+document.addEventListener("keydown",e=>{ if(e.key==="Escape" && dialog.open) dialog.close(); });
 
 const menuBtn = document.querySelector(".menu-btn");
 menuBtn.addEventListener("click",()=>{
