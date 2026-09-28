@@ -14,3 +14,15 @@
 footer{padding:30px 0 50px;color:#66717d;font-size:10px}.reveal{opacity:0;transform:translateY(18px);transition:.7s ease}.reveal.visible{opacity:1;transform:none}
 @media(max-width:900px){.hero-grid,.section-head{grid-template-columns:1fr}.browser{width:92%;height:420px}.phone{width:180px;height:350px}.problem-grid,.decision-grid{grid-template-columns:1fr}.arch-row{grid-template-columns:1fr}.arch-arrow{transform:rotate(90deg)}.flow-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.wrap{width:calc(100% - 28px)}.hero{padding-top:60px}.hero h1{font-size:70px}.meta{grid-template-columns:1fr 1fr}.device-stage{min-height:480px}.browser{width:95%;height:330px}.browser-body{grid-template-columns:72px 1fr}.screen{padding:18px 12px}.phone{width:145px;height:290px;right:-10px}.section{padding:76px 0}.outcome{padding:42px 24px}.section-copy{font-size:16px}}
+
+/* Personal case-study override */
+:root{--bg:#f1eee8;--panel:#f8f5ef;--panel-2:#e8e2d9;--line:rgba(29,27,24,.12);--line-2:rgba(29,27,24,.22);--text:#1d1b18;--muted:#756f66;--accent:#c95634;--cyan:#426b5c;--purple:#81634e}
+body{background:var(--bg);color:var(--text)}
+.topbar{background:rgba(241,238,232,.9);border-color:var(--line)}.back{color:#575149}.back:hover{color:var(--accent)}.case-id{color:#8a8278}
+.hero h1,.section h2,.outcome h2,.flow-column h3,.timeline-item h3,.card h3,.next strong{font-family:"Instrument Serif",serif;font-weight:400}
+.hero h1 span{background:none;color:var(--accent);font-style:italic}.eyebrow{color:#777066}.hero-lead,.section-copy,.card p,.arch-note,.step p,.timeline-item p,.outcome p{color:#6d675f}
+.meta div,.card,.arch,.flow-column{background:var(--panel);border-color:var(--line);border-radius:4px}.meta span,.card span,.section-no{color:#867e74}
+.device-stage{background:#d9d1c5;border-color:var(--line);border-radius:4px}.browser{box-shadow:14px 18px 0 rgba(29,27,24,.13)}.phone{box-shadow:10px 14px 0 rgba(29,27,24,.13)}
+.arch-node{background:#e7e0d7;color:#1d1b18;border-color:var(--line-2)}.arch-arrow{color:#8f877c}.step-no{border-color:var(--line-2);color:#6d665d}.timeline-item:before{background:var(--accent);box-shadow:none}
+.outcome{background:#1d1b18;color:#f6f1e9;border:0;border-radius:4px}.outcome .eyebrow,.outcome p{color:#c8c0b5}.tags span{border-color:var(--line-2);color:#625c54}.outcome .tags span{border-color:rgba(255,255,255,.22);color:#e4ddd4}
+.next a{border-color:var(--line)}footer{color:#857e74}
