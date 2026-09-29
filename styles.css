@@ -292,3 +292,72 @@ body{
   .visual-row .project-preview{display:none}
   .visual-row .project-arrow{grid-column:3;grid-row:1/3}
 }
+
+/* Fix native preview framing */
+.native-preview-stage{
+  min-height:560px;
+  padding:28px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:22px;
+  align-items:stretch;
+}
+.native-preview{
+  position:relative;
+  width:auto;
+  height:500px;
+  left:auto;
+  right:auto;
+  top:auto;
+  transform:none;
+  box-shadow:8px 10px 0 rgba(31,28,24,.10);
+  overflow:hidden;
+}
+.native-preview iframe{
+  width:100%;
+  height:100%;
+  border:0;
+  overflow:hidden;
+  display:block;
+}
+.native-preview-seller,
+.native-preview-buyer{
+  width:auto;
+  height:500px;
+  left:auto;
+  right:auto;
+  top:auto;
+  transform:none;
+}
+.native-preview-label{
+  top:10px;
+  left:10px;
+  padding:4px 6px;
+  font-size:7px;
+  background:rgba(31,28,24,.86);
+  pointer-events:none;
+}
+@media(max-width:900px){
+  .native-preview-stage{
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+    padding:18px;
+  }
+  .native-preview,
+  .native-preview-seller,
+  .native-preview-buyer{
+    height:450px;
+  }
+}
+@media(max-width:680px){
+  .native-preview-stage{
+    grid-template-columns:1fr;
+    min-height:auto;
+  }
+  .native-preview,
+  .native-preview-seller,
+  .native-preview-buyer{
+    height:430px;
+  }
+  .native-preview-buyer{display:none}
+}
