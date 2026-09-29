@@ -113,3 +113,50 @@ body{
 .hero-copy{font-size:18px;line-height:1.6}
 .project-lead,.about-small{font-size:16px;line-height:1.65}
 .nameplate,.nav,.tiny-link,.project-desc,.experience-row p{letter-spacing:-.01em}
+
+/* Natural icon system */
+.icon{
+  width:15px;
+  height:15px;
+  display:inline-block;
+  vertical-align:-2px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.7;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  flex:0 0 auto;
+}
+.tiny-link,
+.underline-link,
+.project-link,
+.footer-actions a{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+}
+.project-arrow{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+}
+.project-arrow .icon{
+  width:17px;
+  height:17px;
+}
+.dialog-close{
+  display:grid;
+  place-items:center;
+}
+.dialog-close .icon{
+  width:17px;
+  height:17px;
+}
+.ticker-dot{
+  width:3px;
+  height:3px;
+  border-radius:50%;
+  background:var(--rust);
+  display:inline-block;
+  margin:0 2px;
+}
