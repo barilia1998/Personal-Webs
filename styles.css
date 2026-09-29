@@ -67,7 +67,15 @@ button{font:inherit;color:inherit}
 .site-footer{padding:28px 0 42px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:10px;color:#817a71}
 dialog{width:min(920px,calc(100% - 28px));border:1px solid var(--ink);padding:0;background:var(--paper);color:var(--ink);box-shadow:18px 20px 0 rgba(31,28,24,.2)}
 dialog::backdrop{background:rgba(31,28,24,.44);backdrop-filter:blur(3px)}
-.dialog-close{position:absolute;right:16px;top:16px;width:36px;height:36px;border:1px solid var(--ink);background:transparent;cursor:pointer}
+.dialog-close{
+  display:grid;
+  place-items:center;
+  border:0;
+  background:transparent;
+  width:32px;
+  height:32px;
+  cursor:pointer;
+}
 .dialog-content{padding:58px}.dialog-kicker{font-size:9px;text-transform:uppercase;letter-spacing:.13em;color:var(--rust)}.dialog-content h2{font-size:64px;margin:12px 0 15px}.dialog-intro{font-size:17px;color:#645e55;max-width:700px}
 .dialog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:34px}.dialog-grid>div{border-top:1px solid var(--ink);padding-top:16px}.dialog-grid small{font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:#7e766d}.dialog-grid p{font-size:13px;color:#655f56}.dialog-stack{display:flex;gap:7px;flex-wrap:wrap;margin-top:28px}.dialog-stack span{border:1px solid var(--line);border-radius:999px;padding:7px 10px;font-size:10px}
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:none}.delay{transition-delay:.08s}
@@ -117,29 +125,26 @@ body{
 
 /* Generic UI icon system */
 .ui-icon{
-  width:22px;
-  height:22px;
   display:inline-grid;
   place-items:center;
-  border:1px solid var(--line);
-  border-radius:50%;
-  background:rgba(255,255,255,.18);
+  width:14px;
+  height:14px;
   flex:0 0 auto;
+  border:0;
+  background:transparent;
 }
 .ui-icon svg{
-  width:12px;
-  height:12px;
+  width:14px;
+  height:14px;
   fill:none;
   stroke:currentColor;
-  stroke-width:1.8;
+  stroke-width:1.7;
   stroke-linecap:round;
   stroke-linejoin:round;
 }
 .ui-icon-plain{
-  width:20px;
-  height:20px;
-  border:0;
-  background:transparent;
+  width:16px;
+  height:16px;
 }
 .tiny-link,
 .underline-link,
@@ -153,14 +158,6 @@ body{
   display:flex;
   justify-content:flex-end;
   align-items:center;
-}
-.project-row:hover .ui-icon,
-.tiny-link:hover .ui-icon,
-.underline-link:hover .ui-icon,
-.project-link:hover .ui-icon,
-.footer-actions a:hover .ui-icon{
-  border-color:currentColor;
-  background:rgba(198,92,63,.08);
 }
 .dialog-close{
   display:grid;
