@@ -362,9 +362,10 @@ body{
   .native-preview-buyer{display:none}
 }
 
-/* Phone mockups for mobile projects */
+
+/* Android device mockups for mobile projects */
 .native-preview-stage{
-  min-height:610px;
+  min-height:620px;
   padding:34px 42px;
   background:
     linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,0)),
@@ -408,55 +409,69 @@ body{
   text-transform:uppercase;
 }
 .phone-mockup{
-  width:min(100%,270px);
-  filter:drop-shadow(0 22px 30px rgba(31,28,24,.18));
+  width:min(100%,265px);
+  filter:drop-shadow(0 22px 32px rgba(31,28,24,.18));
 }
 .phone-bezel{
   position:relative;
-  background:#111;
-  border:1px solid #2b2b2b;
-  border-radius:38px;
-  padding:11px;
+  background:#151515;
+  border:1px solid #303030;
+  border-radius:30px;
+  padding:7px;
 }
 .phone-bezel:before{
   content:"";
   position:absolute;
-  left:-3px;
-  top:105px;
+  right:-3px;
+  top:120px;
   width:3px;
-  height:52px;
-  border-radius:3px 0 0 3px;
-  background:#242424;
-  box-shadow:0 68px 0 #242424;
+  height:72px;
+  border-radius:0 3px 3px 0;
+  background:#2b2b2b;
 }
 .phone-bezel:after{
   content:"";
   position:absolute;
   right:-3px;
-  top:135px;
+  top:208px;
   width:3px;
-  height:76px;
+  height:46px;
   border-radius:0 3px 3px 0;
-  background:#242424;
+  background:#2b2b2b;
 }
-.phone-speaker{
+.android-camera{
   position:absolute;
-  z-index:3;
-  top:16px;
+  z-index:4;
+  top:12px;
   left:50%;
   transform:translateX(-50%);
-  width:62px;
-  height:17px;
-  border-radius:999px;
-  background:#050505;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#030303;
+  box-shadow:
+    0 0 0 1px #272727,
+    inset 0 0 0 2px #080808;
   pointer-events:none;
 }
 .phone-screen{
   position:relative;
-  height:520px;
+  height:540px;
   overflow:hidden;
-  border-radius:29px;
+  border-radius:24px;
   background:#f7f7f5;
+}
+.phone-screen:after{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:7px;
+  transform:translateX(-50%);
+  width:72px;
+  height:3px;
+  border-radius:999px;
+  background:rgba(0,0,0,.28);
+  pointer-events:none;
 }
 .phone-screen iframe{
   width:100%;
@@ -471,10 +486,10 @@ body{
     padding:28px 22px;
   }
   .phone-mockup{
-    width:min(100%,245px);
+    width:min(100%,240px);
   }
   .phone-screen{
-    height:480px;
+    height:500px;
   }
 }
 @media(max-width:680px){
@@ -490,6 +505,6 @@ body{
     width:min(100%,280px);
   }
   .phone-screen{
-    height:540px;
+    height:565px;
   }
 }
