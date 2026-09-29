@@ -178,56 +178,105 @@ body{
   display:inline-block;
 }
 
-
-
-/* Native project snapshots */
+/* Final TITIPLO project preview */
 .native-preview-stage{
-  min-height:560px;
-  position:relative;
+  min-height:640px;
+  padding:34px 28px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:26px;
+  align-items:center;
+  justify-items:center;
   overflow:hidden;
-  background:#ded7cc;
+  background:#ddd5ca;
   border-left:1px solid var(--ink);
 }
 .native-preview{
-  position:absolute;
-  background:#fff;
-  border:1px solid var(--ink);
-  box-shadow:12px 14px 0 rgba(31,28,24,.14);
-  overflow:hidden;
-}
-.native-preview iframe{
+  position:relative;
   width:100%;
-  height:100%;
+  min-width:0;
+  height:570px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:visible;
+  background:transparent;
+  border:0;
+  box-shadow:none;
+}
+.native-preview-label{display:none}
+.native-preview iframe{
   border:0;
   display:block;
   pointer-events:none;
+  background:transparent;
+  transform-origin:center center;
 }
-.native-preview-label{
-  position:absolute;
-  z-index:2;
-  top:8px;
-  left:10px;
-  padding:5px 7px;
-  background:rgba(31,28,24,.9);
-  color:#fff;
-  font-size:8px;
-  text-transform:uppercase;
-  letter-spacing:.1em;
+
+/* Seller uses landing-page device mockup */
+.native-preview-seller iframe{
+  width:360px;
+  height:690px;
+  transform:scale(.76);
 }
-.native-preview-seller{
-  width:43%;
-  height:500px;
-  left:34px;
-  top:28px;
-  transform:rotate(-1.2deg);
+
+/* Buyer uses current buyer.html/buyer.css storefront */
+.native-preview-buyer iframe{
+  width:430px;
+  height:760px;
+  transform:scale(.66);
 }
-.native-preview-buyer{
-  width:43%;
-  height:500px;
-  right:24px;
-  top:44px;
-  transform:rotate(1.6deg);
+
+@media(max-width:1100px){
+  .native-preview-stage{
+    gap:16px;
+    padding:28px 18px;
+  }
+  .native-preview-seller iframe{
+    transform:scale(.68);
+  }
+  .native-preview-buyer iframe{
+    transform:scale(.59);
+  }
 }
+
+@media(max-width:900px){
+  .native-preview-stage{
+    min-height:560px;
+    gap:8px;
+    padding:24px 10px;
+  }
+  .native-preview{
+    height:500px;
+  }
+  .native-preview-seller iframe{
+    transform:scale(.60);
+  }
+  .native-preview-buyer iframe{
+    transform:scale(.52);
+  }
+}
+
+@media(max-width:680px){
+  .native-preview-stage{
+    grid-template-columns:1fr;
+    min-height:560px;
+    padding:24px 14px;
+    border-left:0;
+    border-top:1px solid var(--ink);
+  }
+  .native-preview{
+    height:510px;
+  }
+  .native-preview-seller iframe{
+    transform:scale(.70);
+  }
+  .native-preview-buyer{
+    display:none;
+  }
+}
+
+/* Project list previews */
 .visual-row{
   grid-template-columns:52px 1.05fr 1.15fr 175px 24px;
   padding:18px 0;
@@ -249,9 +298,7 @@ body{
   transform-origin:0 0;
   pointer-events:none;
 }
-.dashboard-preview iframe{
-  transform:scale(.23);
-}
+.dashboard-preview iframe{transform:scale(.23)}
 .anti-preview iframe{
   width:360px;
   height:690px;
@@ -276,7 +323,9 @@ body{
 }
 .nfc-preview{background:#e2d685}
 .nfc-line{width:42px;height:1px;background:#544f35;margin-top:10px}
-.sheet-lines{display:flex;flex-direction:column;gap:4px;margin-top:8px}.sheet-lines i{height:1px;background:#b6c2b6}
+.sheet-lines{display:flex;flex-direction:column;gap:4px;margin-top:8px}
+.sheet-lines i{height:1px;background:#b6c2b6}
+
 @media(max-width:900px){
   .visual-row{grid-template-columns:42px 1fr 150px 22px}
   .visual-row .project-desc{grid-column:2/3}
@@ -284,372 +333,8 @@ body{
   .visual-row .project-arrow{grid-column:4;grid-row:1/3}
 }
 @media(max-width:680px){
-  .native-preview-stage{min-height:520px;border-left:0;border-top:1px solid var(--ink)}
-  .native-preview-seller{width:58%;height:430px;left:12px;top:32px}
-  .native-preview-buyer{width:58%;height:430px;right:-34px;top:66px}
   .visual-row{grid-template-columns:34px 1fr 20px}
   .visual-row .project-desc{grid-column:2/3}
   .visual-row .project-preview{display:none}
   .visual-row .project-arrow{grid-column:3;grid-row:1/3}
-}
-
-/* Fix native preview framing */
-.native-preview-stage{
-  min-height:560px;
-  padding:28px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:22px;
-  align-items:stretch;
-}
-.native-preview{
-  position:relative;
-  width:auto;
-  height:500px;
-  left:auto;
-  right:auto;
-  top:auto;
-  transform:none;
-  box-shadow:8px 10px 0 rgba(31,28,24,.10);
-  overflow:hidden;
-}
-.native-preview iframe{
-  width:100%;
-  height:100%;
-  border:0;
-  overflow:hidden;
-  display:block;
-}
-.native-preview-seller,
-.native-preview-buyer{
-  width:auto;
-  height:500px;
-  left:auto;
-  right:auto;
-  top:auto;
-  transform:none;
-}
-.native-preview-label{
-  top:10px;
-  left:10px;
-  padding:4px 6px;
-  font-size:7px;
-  background:rgba(31,28,24,.86);
-  pointer-events:none;
-}
-@media(max-width:900px){
-  .native-preview-stage{
-    grid-template-columns:1fr 1fr;
-    gap:14px;
-    padding:18px;
-  }
-  .native-preview,
-  .native-preview-seller,
-  .native-preview-buyer{
-    height:450px;
-  }
-}
-@media(max-width:680px){
-  .native-preview-stage{
-    grid-template-columns:1fr;
-    min-height:auto;
-  }
-  .native-preview,
-  .native-preview-seller,
-  .native-preview-buyer{
-    height:430px;
-  }
-  .native-preview-buyer{display:none}
-}
-
-
-/* Android device mockups for mobile projects */
-.native-preview-stage{
-  min-height:620px;
-  padding:34px 42px;
-  background:
-    linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,0)),
-    #ddd5ca;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:34px;
-  align-items:center;
-  justify-items:center;
-}
-.native-preview{
-  position:relative;
-  width:100%;
-  height:auto;
-  border:0;
-  background:transparent;
-  box-shadow:none;
-  overflow:visible;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-}
-.native-preview-seller,
-.native-preview-buyer{
-  width:100%;
-  height:auto;
-  left:auto;
-  right:auto;
-  top:auto;
-  transform:none;
-}
-.native-preview-label{
-  position:static;
-  margin-bottom:12px;
-  padding:0;
-  background:transparent;
-  color:#5f594f;
-  font-size:9px;
-  font-weight:700;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-}
-.phone-mockup{
-  width:min(100%,265px);
-  filter:drop-shadow(0 22px 32px rgba(31,28,24,.18));
-}
-.phone-bezel{
-  position:relative;
-  background:#151515;
-  border:1px solid #303030;
-  border-radius:30px;
-  padding:7px;
-}
-.phone-bezel:before{
-  content:"";
-  position:absolute;
-  right:-3px;
-  top:120px;
-  width:3px;
-  height:72px;
-  border-radius:0 3px 3px 0;
-  background:#2b2b2b;
-}
-.phone-bezel:after{
-  content:"";
-  position:absolute;
-  right:-3px;
-  top:208px;
-  width:3px;
-  height:46px;
-  border-radius:0 3px 3px 0;
-  background:#2b2b2b;
-}
-.android-camera{
-  position:absolute;
-  z-index:4;
-  top:12px;
-  left:50%;
-  transform:translateX(-50%);
-  width:10px;
-  height:10px;
-  border-radius:50%;
-  background:#030303;
-  box-shadow:
-    0 0 0 1px #272727,
-    inset 0 0 0 2px #080808;
-  pointer-events:none;
-}
-.phone-screen{
-  position:relative;
-  height:540px;
-  overflow:hidden;
-  border-radius:24px;
-  background:#f7f7f5;
-}
-.phone-screen:after{
-  content:"";
-  position:absolute;
-  left:50%;
-  bottom:7px;
-  transform:translateX(-50%);
-  width:72px;
-  height:3px;
-  border-radius:999px;
-  background:rgba(0,0,0,.28);
-  pointer-events:none;
-}
-.phone-screen iframe{
-  width:100%;
-  height:100%;
-  border:0;
-  display:block;
-  pointer-events:none;
-}
-@media(max-width:900px){
-  .native-preview-stage{
-    gap:18px;
-    padding:28px 22px;
-  }
-  .phone-mockup{
-    width:min(100%,240px);
-  }
-  .phone-screen{
-    height:500px;
-  }
-}
-@media(max-width:680px){
-  .native-preview-stage{
-    grid-template-columns:1fr;
-    min-height:auto;
-    padding:28px 18px 34px;
-  }
-  .native-preview-buyer{
-    display:none;
-  }
-  .phone-mockup{
-    width:min(100%,280px);
-  }
-  .phone-screen{
-    height:565px;
-  }
-}
-
-/* Pixel-inspired Android hardware refinement */
-.phone-mockup{
-  width:min(100%,268px);
-  filter:drop-shadow(0 24px 34px rgba(31,28,24,.20));
-}
-.phone-bezel{
-  background:linear-gradient(180deg,#252525,#151515);
-  border:1px solid #3a3a3a;
-  border-radius:28px;
-  padding:6px;
-}
-.phone-bezel:before{
-  right:-4px;
-  top:112px;
-  width:4px;
-  height:76px;
-  background:#3a3a3a;
-  border-radius:0 3px 3px 0;
-}
-.phone-bezel:after{
-  right:-4px;
-  top:205px;
-  width:4px;
-  height:48px;
-  background:#3a3a3a;
-  border-radius:0 3px 3px 0;
-}
-.android-camera{
-  top:11px;
-  width:12px;
-  height:12px;
-  border-radius:50%;
-  background:#070707;
-  box-shadow:0 0 0 1px rgba(255,255,255,.08);
-}
-.android-camera span{
-  display:block;
-  width:4px;
-  height:4px;
-  margin:4px;
-  border-radius:50%;
-  background:#152033;
-  box-shadow:inset 0 0 1px rgba(255,255,255,.35);
-}
-.phone-screen{
-  height:548px;
-  border-radius:22px;
-}
-.phone-screen:after{
-  bottom:6px;
-  width:66px;
-  height:3px;
-  background:rgba(20,20,20,.35);
-}
-.native-preview-seller .phone-bezel{
-  transform:rotate(-1.2deg);
-}
-.native-preview-buyer .phone-bezel{
-  transform:rotate(1.2deg);
-}
-.native-preview-seller .phone-mockup{
-  transform:translateY(-4px);
-}
-.native-preview-buyer .phone-mockup{
-  transform:translateY(8px);
-}
-@media(max-width:900px){
-  .phone-mockup{width:min(100%,244px)}
-  .phone-screen{height:505px}
-}
-@media(max-width:680px){
-  .phone-mockup{width:min(100%,282px)}
-  .phone-screen{height:570px}
-  .native-preview-seller .phone-bezel{transform:none}
-}
-
-/* Use the exact TITIPLO landing-page mockup */
-.native-preview-stage{
-  min-height:610px;
-  display:grid;
-  place-items:center;
-  padding:26px;
-}
-.native-preview.landing-native{
-  width:auto;
-  height:auto;
-  display:block;
-  overflow:visible;
-}
-.native-preview.landing-native .native-preview-label{
-  display:none;
-}
-.native-preview.landing-native iframe{
-  width:360px;
-  height:690px;
-  border:0;
-  display:block;
-  transform:scale(.78);
-  transform-origin:center center;
-  pointer-events:none;
-  background:transparent;
-}
-.native-preview-seller .phone-mockup,
-.native-preview-seller .phone-bezel,
-.native-preview-seller .phone-screen,
-.native-preview-seller .android-camera{
-  display:none!important;
-}
-@media(max-width:680px){
-  .native-preview.landing-native iframe{
-    transform:scale(.82);
-  }
-}
-
-/* Exact buyer mockup from TITIPLO landing page */
-.native-preview-stage{
-  grid-template-columns:1fr 1fr!important;
-  gap:28px!important;
-  padding:28px 24px!important;
-}
-.native-preview.landing-native iframe{
-  width:360px;
-  height:690px;
-  transform:scale(.73);
-  transform-origin:center center;
-}
-.native-preview.buyer-landing-native iframe{
-  width:330px;
-  height:620px;
-  transform:scale(.82);
-}
-.native-preview.buyer-landing-native{
-  display:block!important;
-}
-@media(max-width:900px){
-  .native-preview-stage{gap:12px!important;padding:20px 12px!important}
-  .native-preview.landing-native iframe{transform:scale(.64)}
-  .native-preview.buyer-landing-native iframe{transform:scale(.72)}
-}
-@media(max-width:680px){
-  .native-preview-stage{grid-template-columns:1fr!important}
-  .native-preview.buyer-landing-native{display:none!important}
-  .native-preview.landing-native iframe{transform:scale(.82)}
 }
