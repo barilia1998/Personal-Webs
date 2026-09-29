@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Barsena CMS</title>
+<link rel="stylesheet" href="./admin.css">
+</head>
+<body>
+<main class="admin-shell">
+  <header class="admin-header">
+    <div>
+      <small>PERSONAL WEBSITE</small>
+      <h1>Barsena CMS</h1>
+    </div>
+    <a href="../" target="_blank" rel="noreferrer">Open website</a>
+  </header>
+
+  <section id="setupCard" class="card">
+    <h2>Backend connection</h2>
+    <p>Paste your Cloudflare Worker URL once. It will be saved only in this browser.</p>
+    <div class="field">
+      <label for="apiUrl">Worker URL</label>
+      <input id="apiUrl" placeholder="https://barsena-portfolio-cms.your-subdomain.workers.dev">
+    </div>
+    <button id="saveApi">Save connection</button>
+  </section>
+
+  <section id="loginCard" class="card hidden">
+    <h2>Admin login</h2>
+    <div class="field">
+      <label for="password">Password</label>
+      <input id="password" type="password" autocomplete="current-password">
+    </div>
+    <button id="loginBtn">Login</button>
+    <p id="loginMsg" class="status"></p>
+  </section>
+
+  <section id="editor" class="hidden">
+    <div class="editor-toolbar">
+      <div>
+        <small>CONTENT EDITOR</small>
+        <strong id="saveState">Ready</strong>
+      </div>
+      <div class="toolbar-actions">
+        <button id="reloadBtn" class="secondary">Reload</button>
+        <button id="saveBtn">Save changes</button>
+      </div>
+    </div>
+
+    <div id="formRoot"></div>
+  </section>
+</main>
+<script src="../config.js"></script>
+<script src="./admin.js"></script>
+</body>
+</html>
