@@ -622,3 +622,34 @@ body{
     transform:scale(.82);
   }
 }
+
+/* Exact buyer mockup from TITIPLO landing page */
+.native-preview-stage{
+  grid-template-columns:1fr 1fr!important;
+  gap:28px!important;
+  padding:28px 24px!important;
+}
+.native-preview.landing-native iframe{
+  width:360px;
+  height:690px;
+  transform:scale(.73);
+  transform-origin:center center;
+}
+.native-preview.buyer-landing-native iframe{
+  width:330px;
+  height:620px;
+  transform:scale(.82);
+}
+.native-preview.buyer-landing-native{
+  display:block!important;
+}
+@media(max-width:900px){
+  .native-preview-stage{gap:12px!important;padding:20px 12px!important}
+  .native-preview.landing-native iframe{transform:scale(.64)}
+  .native-preview.buyer-landing-native iframe{transform:scale(.72)}
+}
+@media(max-width:680px){
+  .native-preview-stage{grid-template-columns:1fr!important}
+  .native-preview.buyer-landing-native{display:none!important}
+  .native-preview.landing-native iframe{transform:scale(.82)}
+}
