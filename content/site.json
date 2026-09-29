@@ -1,0 +1,151 @@
+{
+  "hero": {
+    "hello": "Hi, I’m Bayu.",
+    "titleBefore": "I work in ",
+    "titleEmphasis": "operations",
+    "titleAfter": ", then somehow end up building tools.",
+    "description": "My background is in sales and e-commerce operations. Most of the things on this site started because I got tired of doing something manually."
+  },
+  "desk": {
+    "title": "ON MY DESK / 2026",
+    "note": "still tinkering",
+    "items": [
+      {
+        "title": "TITIPLO",
+        "description": "Trying to make jastip less dependent on chat."
+      },
+      {
+        "title": "Loss of Sales Dashboard",
+        "description": "Because OOS reporting should not take forever."
+      },
+      {
+        "title": "NFC experiments",
+        "description": "Turning cheap tags into useful physical products."
+      }
+    ],
+    "location": "Jakarta, Indonesia · GMT+7"
+  },
+  "work": {
+    "eyebrow": "Selected projects",
+    "heading": "A few things I kept thinking about until I built them.",
+    "titiplo": {
+      "meta": "SaaS · Android · 2026",
+      "title": "TITIPLO",
+      "description": "I kept wondering why jastip businesses still run almost everything from chat. What started as a small prototype became a seller app, buyer storefront, order flow, payment proof system, and subscription product.",
+      "linkLabel": "Read how it grew"
+    }
+  },
+  "projects": {
+    "loss": {
+      "title": "Loss of Sales Dashboard",
+      "description": "OOS, stock history, sales velocity, and lost-sales estimates in one place.",
+      "kicker": "02 / Analytics",
+      "intro": "This started because checking OOS, stock history, and potential lost sales manually was taking too much time.",
+      "problem": "Stock history, sales velocity, OOS dates, and lost-sales estimates were spread across different sheets and calculations.",
+      "approach": "I pulled those pieces into one flow, then kept simplifying the dashboard around the questions I actually needed answered.",
+      "outcome": "A much clearer way to see which SKUs are actually causing operational and sales impact.",
+      "stack": [
+        "Google Sheets",
+        "Apps Script",
+        "JavaScript",
+        "Inventory Analytics"
+      ]
+    },
+    "nfc": {
+      "title": "NFC Review System",
+      "description": "A small physical-product experiment using NFC, QR, and unique activation.",
+      "kicker": "03 / Physical product experiment",
+      "intro": "I wanted to see if a cheap NFC tag could become a small product instead of just a tech demo.",
+      "problem": "A simple tap card is easy to copy conceptually, so it needed its own identity, activation flow, and destination setup.",
+      "approach": "Each card gets a unique serial, an activation step, and a simple routing layer behind the tap.",
+      "outcome": "A reusable physical + digital product idea that can be produced cheaply and configured per customer.",
+      "stack": [
+        "NFC",
+        "QR",
+        "Cloudflare Workers",
+        "JavaScript"
+      ]
+    },
+    "commerce": {
+      "title": "E-commerce Automation",
+      "description": "Scripts, calculators, and workflows made because repeating work gets boring.",
+      "kicker": "04 / Daily work turned into tools",
+      "intro": "Not one project, but a growing collection of shortcuts I built because I did not want to repeat the same work every day.",
+      "problem": "Pricing, fees, stock checks, reporting, and marketplace calculations are repetitive and easy to get wrong.",
+      "approach": "Whenever a task repeated often enough, I tried to turn it into a formula, calculator, script, or lightweight workflow.",
+      "outcome": "Less repetitive admin, fewer manual calculations, and faster day-to-day operations.",
+      "stack": [
+        "Shopify",
+        "Google Sheets",
+        "Apps Script",
+        "Marketplace Ops"
+      ]
+    },
+    "anti": {
+      "title": "Android Anti-Theft",
+      "description": "A side experiment with unlock triggers, capture flow, and location alerts.",
+      "kicker": "05 / Weekend rabbit hole",
+      "intro": "This was mostly curiosity: what could an Android device do automatically after a suspicious unlock attempt?",
+      "problem": "A stolen or lost phone becomes much harder to trace once somebody starts trying to access it.",
+      "approach": "I experimented with failed-unlock triggers, camera capture, device location, and remote alerts.",
+      "outcome": "A working proof of concept and a good excuse to learn more about Android device behavior.",
+      "stack": [
+        "Android",
+        "Cloudflare",
+        "Device APIs",
+        "Security"
+      ]
+    }
+  },
+  "quote": {
+    "eyebrow": "something I keep learning",
+    "text": "“Most problems don’t need a bigger system. They usually need a simpler one.”",
+    "sign": "— Bayu, after overcomplicating a few of them first."
+  },
+  "about": {
+    "eyebrow": "About me",
+    "heading": "I didn’t start with code.",
+    "lead": "I started in sales and marketplace operations. Then spreadsheets got complicated, reporting got slow, and repetitive work kept piling up.",
+    "paragraphs": [
+      "So I learned enough formulas to fix one problem. Then Apps Script for another. Then JavaScript, Cloudflare, Android, and whatever else the next problem needed.",
+      "I still don’t think of myself as “a developer first.” I’m more interested in understanding how work actually happens, then making it less annoying."
+    ],
+    "tools": [
+      "Google Sheets",
+      "Apps Script",
+      "JavaScript",
+      "Cloudflare Workers",
+      "D1",
+      "Shopify",
+      "Android",
+      "Marketplace Ops"
+    ]
+  },
+  "experience": {
+    "eyebrow": "Experience",
+    "heading": "Mostly commerce. Increasingly systems.",
+    "items": [
+      {
+        "year": "2026 — now",
+        "company": "Nyonya Piyama",
+        "description": "E-commerce operations, analytics, campaigns, automation, and internal tools."
+      },
+      {
+        "year": "previous",
+        "company": "PT Trio Distribusi / Okeshop",
+        "description": "Online sales and marketplace operations in consumer electronics."
+      },
+      {
+        "year": "earlier",
+        "company": "Gadget Distribution",
+        "description": "Digital sales and marketplace execution."
+      }
+    ]
+  },
+  "footer": {
+    "eyebrow": "That’s all for now.",
+    "heading": "I’ll probably add another project here soon.",
+    "copyright": "Bayu Adjie Rossena",
+    "note": "Made, changed, and changed again."
+  }
+}
