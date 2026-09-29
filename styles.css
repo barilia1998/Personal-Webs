@@ -338,3 +338,23 @@ body{
   .visual-row .project-preview{display:none}
   .visual-row .project-arrow{grid-column:3;grid-row:1/3}
 }
+
+/* Barsena personal brand */
+.brand-nameplate{
+  display:inline-flex;
+  align-items:center;
+  text-decoration:none;
+}
+.brand-logo{
+  display:block;
+  width:auto;
+  height:42px;
+  max-width:180px;
+  object-fit:contain;
+}
+@media(max-width:680px){
+  .brand-logo{
+    height:34px;
+    max-width:145px;
+  }
+}
