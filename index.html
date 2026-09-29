@@ -3,323 +3,275 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Bayu Adjie Rossena — business automation, analytics, internal tools, and digital products." />
-  <meta name="theme-color" content="#07090d" />
-  <meta property="og:title" content="Bayu Adjie Rossena — Portfolio" />
-  <meta property="og:description" content="Business automation, analytics, internal tools, and digital products." />
-  <title>Bayu Adjie Rossena — Portfolio</title>
+  <meta name="description" content="Bayu Adjie Rossena — personal portfolio, projects, experiments, and things I keep building." />
+  <meta name="theme-color" content="#f4f0e8" />
+  <title>Bayu Adjie Rossena — Personal Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-  <div class="aurora aurora-a"></div>
-  <div class="aurora aurora-b"></div>
-  <div class="noise"></div>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="nameplate" href="#top">
+        <span class="dot"></span>
+        <span>Bayu Adjie Rossena</span>
+      </a>
 
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="Back to top">
-      <span class="brand-mark">BA</span>
-      <span class="brand-copy">
-        <strong>Bayu Adjie Rossena</strong>
-        <small>things I build, fix, and learn from</small>
-      </span>
-    </a>
+      <nav class="nav">
+        <a href="#work">Projects</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+      </nav>
 
-    <nav class="nav" aria-label="Primary navigation">
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <a class="header-cta" href="#contact">Say hello <span>↗</span></a>
-    <button class="menu-btn" aria-label="Toggle menu">Menu</button>
+      <a class="tiny-link" href="https://github.com/barilia1998" target="_blank" rel="noreferrer">GitHub ↗</a>
+      <button class="menu-btn" aria-label="Toggle menu">Menu</button>
+    </div>
   </header>
 
   <main id="top">
-    <section class="hero section">
-      <div class="hero-copy reveal">
-        <div class="eyebrow">Hi, I’m Bayu.</div>
-        <h1>I like turning <span class="hero-em">messy work</span> into something simpler.</h1>
-        <p class="hero-lead">Most of my projects start the same way: something feels too manual, too slow, or unnecessarily complicated. I usually end up making a tool for it.</p>
+    <section class="hero shell">
+      <div class="hero-left reveal">
+        <p class="hello">Hi, I’m Bayu.</p>
+        <h1>I work in <em>operations</em>, then somehow end up building tools.</h1>
+        <p class="hero-copy">
+          My background is in sales and e-commerce operations. Most of the things on this site started because I got tired of doing something manually.
+        </p>
 
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#work">See what I’ve been working on <span>↘</span></a>
-          <a class="btn btn-ghost" href="#about">A little about me</a>
-        </div>
-
-        <div class="hero-meta">
-          <div><strong>Jakarta</strong><span>where I’m based</span></div>
-          <div><strong>Ops + Product</strong><span>where I spend most of my time</span></div>
-          <div><strong>Always</strong><span>building something on the side</span></div>
+        <div class="hero-links">
+          <a href="#work" class="underline-link">See the projects ↓</a>
+          <a href="#about" class="underline-link muted">More about me</a>
         </div>
       </div>
 
-      <div class="hero-stage reveal delay-1">
-        <div class="stage-ring ring-1"></div>
-        <div class="stage-ring ring-2"></div>
-        <div class="stage-orbit orbit-a"></div>
-        <div class="stage-orbit orbit-b"></div>
-
-        <div class="identity-card glass tilt-card">
-          <div class="identity-top">
-            <span class="identity-dot"></span>
-            <span>NOTES / PROJECTS / 2026</span>
+      <aside class="desk-card reveal delay">
+        <div class="desk-header">
+          <span>ON MY DESK / 2026</span>
+          <span class="scribble">still tinkering</span>
+        </div>
+        <div class="desk-body">
+          <div class="desk-row">
+            <span class="desk-no">01</span>
+            <div>
+              <strong>TITIPLO</strong>
+              <p>Trying to make jastip less dependent on chat.</p>
+            </div>
           </div>
-          <div class="identity-monogram">BA</div>
-          <div class="identity-copy">
-            <span>Bayu Adjie Rossena</span>
-            <strong>I build things<br>because I hate repetitive work.</strong>
+          <div class="desk-row">
+            <span class="desk-no">02</span>
+            <div>
+              <strong>Loss of Sales Dashboard</strong>
+              <p>Because OOS reporting should not take forever.</p>
+            </div>
           </div>
-        </div>
-
-        <div class="floating-chip chip-a">Automation</div>
-        <div class="floating-chip chip-b">Analytics</div>
-        <div class="floating-chip chip-c">Product</div>
-      </div>
-    </section>
-
-    <section class="trust-strip personal-strip">
-      <div class="trust-track">
-        <span>automation I actually use</span><i>✦</i>
-        <span>dashboards that answer something</span><i>✦</i>
-        <span>small tools for real problems</span><i>✦</i>
-        <span>e-commerce experiments</span><i>✦</i>
-        <span>side projects that became products</span><i>✦</i>
-        <span>BUSINESS AUTOMATION</span><i>✦</i>
-        <span>DATA & ANALYTICS</span><i>✦</i>
-      </div>
-    </section>
-
-    <section id="work" class="section work-section">
-      <div class="section-heading reveal">
-        <div>
-          <span class="kicker">Selected work</span>
-          <h2>A few things I’ve actually built.</h2>
-        </div>
-        <p>Some started from work problems. Some started from curiosity. All of them taught me something.</p>
-      </div>
-
-      <article class="project-card featured reveal spotlight">
-        <div class="project-visual titiplo-visual">
-          <div class="visual-label">THE ONE I SPENT WAY TOO MUCH TIME ON</div>
-          <div class="browser browser-premium">
-            <div class="browser-bar"><i></i><i></i><i></i><span>titiplo / seller workspace</span></div>
-            <div class="app-shell">
-              <aside class="app-side">
-                <b></b><span></span><span></span><span></span><span></span>
-              </aside>
-              <div class="app-main">
-                <div class="fake-heading-row"><div class="fake-title"></div><div class="fake-pill"></div></div>
-                <div class="metric-row"><b></b><b></b><b></b></div>
-                <div class="fake-grid"><span></span><span></span><span></span><span></span></div>
-              </div>
+          <div class="desk-row">
+            <span class="desk-no">03</span>
+            <div>
+              <strong>NFC experiments</strong>
+              <p>Turning cheap tags into useful physical products.</p>
             </div>
           </div>
         </div>
-        <div class="project-content">
-          <div class="project-topline">
-            <div class="project-index">01 / 05</div>
-            <span class="project-type">SaaS Platform</span>
+        <div class="desk-footer">
+          Jakarta, Indonesia · GMT+7
+        </div>
+      </aside>
+    </section>
+
+    <section class="ticker">
+      <div class="ticker-track">
+        <span>e-commerce ops</span><i>•</i>
+        <span>automation</span><i>•</i>
+        <span>dashboards</span><i>•</i>
+        <span>small products</span><i>•</i>
+        <span>google sheets</span><i>•</i>
+        <span>cloudflare</span><i>•</i>
+        <span>android experiments</span><i>•</i>
+        <span>e-commerce ops</span><i>•</i>
+        <span>automation</span><i>•</i>
+        <span>dashboards</span><i>•</i>
+      </div>
+    </section>
+
+    <section id="work" class="shell section">
+      <div class="section-intro reveal">
+        <p class="section-label">Selected projects</p>
+        <h2>A few things I kept thinking about until I built them.</h2>
+      </div>
+
+      <article class="feature-project reveal">
+        <div class="feature-copy">
+          <div class="project-meta">
+            <span>01</span>
+            <span>SaaS · Android · 2026</span>
           </div>
           <h3>TITIPLO</h3>
-          <p>I started this because I kept thinking: “why does jastip still live almost entirely in chat?” It slowly turned into a full seller + buyer product.</p>
-          <div class="project-proof">
-            <div><span>Started as</span><strong>a small experiment</strong></div>
-            <div><span>Became</span><strong>a real SaaS product</strong></div>
+          <p class="project-lead">
+            I kept wondering why jastip businesses still run almost everything from chat. What started as a small prototype became a seller app, buyer storefront, order flow, payment proof system, and subscription product.
+          </p>
+          <a class="project-link" href="./work/titiplo/">Read how it grew ↗</a>
+        </div>
+
+        <div class="feature-visual">
+          <div class="paper-note">
+            <span class="note-top">first question</span>
+            <p>“What would a jastip app feel like if it was made for the seller first?”</p>
+            <span class="note-bottom">— where TITIPLO started</span>
           </div>
-          <div class="tags"><span>Product Design</span><span>Cloudflare</span><span>D1</span><span>Android</span></div>
-          <a class="text-link" href="./work/titiplo/">Read the full story <span>↗</span></a>
+          <div class="ui-window">
+            <div class="window-top"><i></i><i></i><i></i></div>
+            <div class="window-content">
+              <aside>
+                <b></b><span></span><span></span><span></span>
+              </aside>
+              <main>
+                <div class="fake-title"></div>
+                <div class="fake-kpis"><span></span><span></span><span></span></div>
+                <div class="fake-panels"><span></span><span></span></div>
+              </main>
+            </div>
+          </div>
         </div>
       </article>
 
-      <div class="project-grid">
-        <article class="project-card compact reveal spotlight">
-          <div class="mini-visual dashboard-visual">
-            <div class="mini-caption">INVENTORY INTELLIGENCE</div>
-            <div class="dashboard-shell">
-              <div class="dash-kpis"><b></b><b></b><b></b></div>
-              <div class="dash-body">
-                <div class="chart-bars"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-                <div class="dash-list"><span></span><span></span><span></span><span></span></div>
-              </div>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-topline"><div class="project-index">02 / 05</div><span class="project-type">Analytics</span></div>
-            <h3>Loss of Sales Dashboard</h3>
-            <p>Built because checking OOS and lost sales manually was getting ridiculous. This became my way to see what actually needed attention.</p>
-            <div class="tags"><span>Google Sheets</span><span>Apps Script</span><span>Analytics</span></div>
-            <button class="text-link project-open" data-project="loss">Open case study <span>↗</span></button>
-          </div>
-        </article>
+      <div class="project-list">
+        <button class="project-row reveal project-open" data-project="loss">
+          <span class="project-number">02</span>
+          <span class="project-title">Loss of Sales Dashboard</span>
+          <span class="project-desc">OOS, stock history, sales velocity, and lost-sales estimates in one place.</span>
+          <span class="project-arrow">↗</span>
+        </button>
 
-        <article class="project-card compact reveal delay-1 spotlight">
-          <div class="mini-visual nfc-visual">
-            <div class="mini-caption">PHYSICAL × DIGITAL</div>
-            <div class="nfc-card">
-              <div class="nfc-top"><span>SAFE TAP</span><span>01</span></div>
-              <div class="nfc-wave">)))</div>
-              <span class="tap-copy">TAP TO REVIEW</span>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-topline"><div class="project-index">03 / 05</div><span class="project-type">NFC Product</span></div>
-            <h3>NFC Review System</h3>
-            <p>A small physical product experiment: tap a card, activate it once, then send customers straight to the right review page.</p>
-            <div class="tags"><span>NFC</span><span>QR</span><span>Workers</span></div>
-            <button class="text-link project-open" data-project="nfc">Open case study <span>↗</span></button>
-          </div>
-        </article>
+        <button class="project-row reveal project-open" data-project="nfc">
+          <span class="project-number">03</span>
+          <span class="project-title">NFC Review System</span>
+          <span class="project-desc">A small physical-product experiment using NFC, QR, and unique activation.</span>
+          <span class="project-arrow">↗</span>
+        </button>
 
-        <article class="project-card compact reveal spotlight">
-          <div class="mini-visual commerce-visual">
-            <div class="mini-caption">OPERATIONS SYSTEM</div>
-            <div class="flow-stack">
-              <div class="flow-node"><small>01</small><strong>Marketplace</strong></div>
-              <span>→</span>
-              <div class="flow-node active"><small>02</small><strong>Rules & Automation</strong></div>
-              <span>→</span>
-              <div class="flow-node"><small>03</small><strong>Reporting</strong></div>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-topline"><div class="project-index">04 / 05</div><span class="project-type">Automation</span></div>
-            <h3>E-commerce Automation</h3>
-            <p>A collection of spreadsheets, scripts, calculators, and shortcuts I built because repeating the same e-commerce tasks every day gets old fast.</p>
-            <div class="tags"><span>Shopify</span><span>Automation</span><span>Ops</span></div>
-            <button class="text-link project-open" data-project="commerce">Open case study <span>↗</span></button>
-          </div>
-        </article>
+        <button class="project-row reveal project-open" data-project="commerce">
+          <span class="project-number">04</span>
+          <span class="project-title">E-commerce Automation</span>
+          <span class="project-desc">Scripts, calculators, and workflows made because repeating work gets boring.</span>
+          <span class="project-arrow">↗</span>
+        </button>
 
-        <article class="project-card compact reveal delay-1 spotlight">
-          <div class="mini-visual anti-visual">
-            <div class="mini-caption">MOBILE SECURITY EXPERIMENT</div>
-            <div class="phone">
-              <div class="phone-notch"></div>
-              <div class="shield">✓</div>
-              <div class="phone-status">SECURE</div>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-topline"><div class="project-index">05 / 05</div><span class="project-type">Android</span></div>
-            <h3>Android Anti-Theft</h3>
-            <p>A weekend rabbit hole that turned into an Android anti-theft experiment with failed-unlock triggers, camera capture, and location alerts.</p>
-            <div class="tags"><span>Android</span><span>Cloudflare</span><span>Security</span></div>
-            <button class="text-link project-open" data-project="anti">Open case study <span>↗</span></button>
-          </div>
-        </article>
+        <button class="project-row reveal project-open" data-project="anti">
+          <span class="project-number">05</span>
+          <span class="project-title">Android Anti-Theft</span>
+          <span class="project-desc">A side experiment with unlock triggers, capture flow, and location alerts.</span>
+          <span class="project-arrow">↗</span>
+        </button>
       </div>
     </section>
 
-    <section class="section philosophy-section">
-      <div class="philosophy-card reveal">
-        <span class="kicker">One thing I keep learning</span>
-        <p>Most problems don’t need a bigger system. They usually need a simpler one.</p>
-        <div class="philosophy-meta">
-          <span>make it easier</span>
-          <span>make it obvious</span>
-          <span>automate the boring part</span>
-        </div>
+    <section class="shell section note-section">
+      <div class="personal-note reveal">
+        <div class="tape tape-a"></div>
+        <div class="tape tape-b"></div>
+        <p class="note-small">something I keep learning</p>
+        <blockquote>
+          “Most problems don’t need a bigger system. They usually need a simpler one.”
+        </blockquote>
+        <p class="note-sign">— Bayu, after overcomplicating a few of them first.</p>
       </div>
     </section>
 
-    <section id="about" class="section about-section">
-      <div class="section-heading reveal">
-        <div><span class="kicker">About</span><h2>I’m not really one thing.</h2></div>
+    <section id="about" class="shell section about">
+      <div class="section-intro reveal">
+        <p class="section-label">About me</p>
+        <h2>I didn’t start with code.</h2>
       </div>
 
       <div class="about-grid">
-        <div class="about-lead-wrap reveal">
-          <p class="about-lead">My background is in sales and e-commerce operations, but I keep drifting into product, data, automation, and code whenever I see something that could work better.</p>
-          <div class="about-number">NOT A DEVELOPER-FIRST STORY</div>
+        <div class="about-big reveal">
+          <p>
+            I started in sales and marketplace operations. Then spreadsheets got complicated, reporting got slow, and repetitive work kept piling up.
+          </p>
         </div>
-        <div class="about-copy reveal delay-1">
-          <p>I didn’t start by learning code and then looking for things to build. It was the opposite. Work kept giving me annoying problems, so I learned enough code to solve them.</p>
-          <p>Sometimes the answer is a formula. Sometimes it is Apps Script. Sometimes it becomes a Cloudflare Worker, an Android app, or a whole product. I care more about whether it works than whether the stack sounds impressive.</p>
-          <div class="principles">
-            <div><span>01</span><strong>Understand what is actually annoying.</strong></div>
-            <div><span>02</span><strong>Build the smallest useful version first.</strong></div>
-            <div><span>03</span><strong>Then fix what breaks in real use.</strong></div>
-          </div>
+        <div class="about-small reveal delay">
+          <p>
+            So I learned enough formulas to fix one problem. Then Apps Script for another. Then JavaScript, Cloudflare, Android, and whatever else the next problem needed.
+          </p>
+          <p>
+            I still don’t think of myself as “a developer first.” I’m more interested in understanding how work actually happens, then making it less annoying.
+          </p>
         </div>
       </div>
 
-      <div class="skill-marquee reveal">
-        <span>Google Apps Script</span><span>JavaScript</span><span>Cloudflare Workers</span><span>D1</span><span>Google Sheets</span><span>Shopify</span><span>Automation</span><span>Analytics</span><span>Product Thinking</span>
-      </div>
-    </section>
-
-    <section id="experience" class="section experience-section">
-      <div class="section-heading reveal">
-        <div><span class="kicker">Experience</span><h2>Where I’ve spent my working years.</h2></div>
-      </div>
-
-      <div class="timeline">
-        <div class="timeline-item reveal">
-          <div class="timeline-year">2026 — Present</div>
-          <div class="timeline-role">
-            <h3>Nyonya Piyama</h3>
-            <p>Working around e-commerce, data, campaigns, operations, and a growing number of internal tools I keep building along the way.</p>
-          </div>
-          <div class="timeline-no">01</div>
-        </div>
-        <div class="timeline-item reveal">
-          <div class="timeline-year">Previous</div>
-          <div class="timeline-role">
-            <h3>PT Trio Distribusi / Okeshop</h3>
-            <p>Online sales and marketplace operations for consumer electronics — where I got very used to solving things with spreadsheets.</p>
-          </div>
-          <div class="timeline-no">02</div>
-        </div>
-        <div class="timeline-item reveal">
-          <div class="timeline-year">Earlier</div>
-          <div class="timeline-role">
-            <h3>Gadget Distribution</h3>
-            <p>Digital sales and marketplace work. This is where most of my operational habits came from.</p>
-          </div>
-          <div class="timeline-no">03</div>
-        </div>
+      <div class="toolbox reveal">
+        <span>Google Sheets</span>
+        <span>Apps Script</span>
+        <span>JavaScript</span>
+        <span>Cloudflare Workers</span>
+        <span>D1</span>
+        <span>Shopify</span>
+        <span>Android</span>
+        <span>Marketplace Ops</span>
       </div>
     </section>
 
-    <section id="contact" class="section contact-section">
-      <div class="contact-card reveal spotlight">
-        <div class="contact-orb"></div>
-        <span class="kicker">If you made it this far</span>
-        <h2>Thanks for looking around.</h2>
-        <p>If you want to talk about a project, an idea, or a weird operational problem, you can find me on GitHub for now.</p>
-        <div class="contact-actions">
-          <a class="btn btn-primary" href="https://github.com/barilia1998" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
-          <a class="btn btn-ghost" href="#top">Back to top ↑</a>
+    <section id="experience" class="shell section experience">
+      <div class="section-intro reveal">
+        <p class="section-label">Experience</p>
+        <h2>Mostly commerce. Increasingly systems.</h2>
+      </div>
+
+      <div class="experience-list">
+        <div class="experience-row reveal">
+          <span class="year">2026 — now</span>
+          <div>
+            <strong>Nyonya Piyama</strong>
+            <p>E-commerce operations, analytics, campaigns, automation, and internal tools.</p>
+          </div>
+        </div>
+        <div class="experience-row reveal">
+          <span class="year">previous</span>
+          <div>
+            <strong>PT Trio Distribusi / Okeshop</strong>
+            <p>Online sales and marketplace operations in consumer electronics.</p>
+          </div>
+        </div>
+        <div class="experience-row reveal">
+          <span class="year">earlier</span>
+          <div>
+            <strong>Gadget Distribution</strong>
+            <p>Digital sales and marketplace execution.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="shell section footer-cta">
+      <div class="footer-card reveal">
+        <p class="section-label">That’s all for now.</p>
+        <h2>I’ll probably add another project here soon.</h2>
+        <div class="footer-actions">
+          <a href="https://github.com/barilia1998" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a href="#top">Back to top ↑</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer shell">
     <span>© <span id="year"></span> Bayu Adjie Rossena</span>
-    <span>Jakarta · GMT+7</span>
-    <span>Made by Bayu, then changed too many times.</span>
+    <span>Made, changed, and changed again.</span>
   </footer>
 
   <dialog id="case-dialog">
-    <button class="dialog-close" aria-label="Close case study">×</button>
-    <div class="dialog-inner">
-      <div class="dialog-head">
-        <span class="kicker" id="dialog-kicker"></span>
-        <span class="dialog-number">CASE STUDY</span>
-      </div>
+    <button class="dialog-close" aria-label="Close">×</button>
+    <div class="dialog-content">
+      <span id="dialog-kicker" class="dialog-kicker"></span>
       <h2 id="dialog-title"></h2>
-      <p class="dialog-intro" id="dialog-intro"></p>
-      <div class="case-columns">
-        <div><span>Problem</span><p id="dialog-problem"></p></div>
-        <div><span>Approach</span><p id="dialog-approach"></p></div>
-        <div><span>Outcome</span><p id="dialog-outcome"></p></div>
+      <p id="dialog-intro" class="dialog-intro"></p>
+      <div class="dialog-grid">
+        <div><small>Problem</small><p id="dialog-problem"></p></div>
+        <div><small>What I tried</small><p id="dialog-approach"></p></div>
+        <div><small>Where it landed</small><p id="dialog-outcome"></p></div>
       </div>
-      <div class="case-stack" id="dialog-stack"></div>
+      <div id="dialog-stack" class="dialog-stack"></div>
     </div>
   </dialog>
 
