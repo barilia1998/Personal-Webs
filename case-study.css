@@ -49,27 +49,35 @@ body{
 .outcome h2{font-size:clamp(42px,6vw,70px);line-height:.98}
 .hero-lead,.section-copy{font-size:17px;line-height:1.65}
 
-/* Natural icon system */
-.icon{
-  width:15px;
-  height:15px;
-  display:inline-block;
-  vertical-align:-2px;
+
+/* Generic UI icon system */
+.ui-icon{
+  width:22px;
+  height:22px;
+  display:inline-grid;
+  place-items:center;
+  border:1px solid var(--line);
+  border-radius:50%;
+  background:rgba(255,255,255,.16);
+  flex:0 0 auto;
+}
+.ui-icon svg{
+  width:12px;
+  height:12px;
   fill:none;
   stroke:currentColor;
-  stroke-width:1.7;
+  stroke-width:1.8;
   stroke-linecap:round;
   stroke-linejoin:round;
 }
 .back,
-.next a{
-  display:flex;
-  align-items:center;
-  gap:8px;
-}
-.back .icon{width:14px;height:14px}
 .next a strong{
   display:inline-flex;
   align-items:center;
   gap:8px;
+}
+.back:hover .ui-icon,
+.next a:hover .ui-icon{
+  border-color:currentColor;
+  background:rgba(198,92,63,.08);
 }
