@@ -508,3 +508,79 @@ body{
     height:565px;
   }
 }
+
+/* Pixel-inspired Android hardware refinement */
+.phone-mockup{
+  width:min(100%,268px);
+  filter:drop-shadow(0 24px 34px rgba(31,28,24,.20));
+}
+.phone-bezel{
+  background:linear-gradient(180deg,#252525,#151515);
+  border:1px solid #3a3a3a;
+  border-radius:28px;
+  padding:6px;
+}
+.phone-bezel:before{
+  right:-4px;
+  top:112px;
+  width:4px;
+  height:76px;
+  background:#3a3a3a;
+  border-radius:0 3px 3px 0;
+}
+.phone-bezel:after{
+  right:-4px;
+  top:205px;
+  width:4px;
+  height:48px;
+  background:#3a3a3a;
+  border-radius:0 3px 3px 0;
+}
+.android-camera{
+  top:11px;
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  background:#070707;
+  box-shadow:0 0 0 1px rgba(255,255,255,.08);
+}
+.android-camera span{
+  display:block;
+  width:4px;
+  height:4px;
+  margin:4px;
+  border-radius:50%;
+  background:#152033;
+  box-shadow:inset 0 0 1px rgba(255,255,255,.35);
+}
+.phone-screen{
+  height:548px;
+  border-radius:22px;
+}
+.phone-screen:after{
+  bottom:6px;
+  width:66px;
+  height:3px;
+  background:rgba(20,20,20,.35);
+}
+.native-preview-seller .phone-bezel{
+  transform:rotate(-1.2deg);
+}
+.native-preview-buyer .phone-bezel{
+  transform:rotate(1.2deg);
+}
+.native-preview-seller .phone-mockup{
+  transform:translateY(-4px);
+}
+.native-preview-buyer .phone-mockup{
+  transform:translateY(8px);
+}
+@media(max-width:900px){
+  .phone-mockup{width:min(100%,244px)}
+  .phone-screen{height:505px}
+}
+@media(max-width:680px){
+  .phone-mockup{width:min(100%,282px)}
+  .phone-screen{height:570px}
+  .native-preview-seller .phone-bezel{transform:none}
+}
