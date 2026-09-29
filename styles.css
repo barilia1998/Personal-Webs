@@ -361,3 +361,135 @@ body{
   }
   .native-preview-buyer{display:none}
 }
+
+/* Phone mockups for mobile projects */
+.native-preview-stage{
+  min-height:610px;
+  padding:34px 42px;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,0)),
+    #ddd5ca;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:34px;
+  align-items:center;
+  justify-items:center;
+}
+.native-preview{
+  position:relative;
+  width:100%;
+  height:auto;
+  border:0;
+  background:transparent;
+  box-shadow:none;
+  overflow:visible;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.native-preview-seller,
+.native-preview-buyer{
+  width:100%;
+  height:auto;
+  left:auto;
+  right:auto;
+  top:auto;
+  transform:none;
+}
+.native-preview-label{
+  position:static;
+  margin-bottom:12px;
+  padding:0;
+  background:transparent;
+  color:#5f594f;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.phone-mockup{
+  width:min(100%,270px);
+  filter:drop-shadow(0 22px 30px rgba(31,28,24,.18));
+}
+.phone-bezel{
+  position:relative;
+  background:#111;
+  border:1px solid #2b2b2b;
+  border-radius:38px;
+  padding:11px;
+}
+.phone-bezel:before{
+  content:"";
+  position:absolute;
+  left:-3px;
+  top:105px;
+  width:3px;
+  height:52px;
+  border-radius:3px 0 0 3px;
+  background:#242424;
+  box-shadow:0 68px 0 #242424;
+}
+.phone-bezel:after{
+  content:"";
+  position:absolute;
+  right:-3px;
+  top:135px;
+  width:3px;
+  height:76px;
+  border-radius:0 3px 3px 0;
+  background:#242424;
+}
+.phone-speaker{
+  position:absolute;
+  z-index:3;
+  top:16px;
+  left:50%;
+  transform:translateX(-50%);
+  width:62px;
+  height:17px;
+  border-radius:999px;
+  background:#050505;
+  pointer-events:none;
+}
+.phone-screen{
+  position:relative;
+  height:520px;
+  overflow:hidden;
+  border-radius:29px;
+  background:#f7f7f5;
+}
+.phone-screen iframe{
+  width:100%;
+  height:100%;
+  border:0;
+  display:block;
+  pointer-events:none;
+}
+@media(max-width:900px){
+  .native-preview-stage{
+    gap:18px;
+    padding:28px 22px;
+  }
+  .phone-mockup{
+    width:min(100%,245px);
+  }
+  .phone-screen{
+    height:480px;
+  }
+}
+@media(max-width:680px){
+  .native-preview-stage{
+    grid-template-columns:1fr;
+    min-height:auto;
+    padding:28px 18px 34px;
+  }
+  .native-preview-buyer{
+    display:none;
+  }
+  .phone-mockup{
+    width:min(100%,280px);
+  }
+  .phone-screen{
+    height:540px;
+  }
+}
