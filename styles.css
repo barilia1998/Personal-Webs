@@ -114,18 +114,32 @@ body{
 .project-lead,.about-small{font-size:16px;line-height:1.65}
 .nameplate,.nav,.tiny-link,.project-desc,.experience-row p{letter-spacing:-.01em}
 
-/* Natural icon system */
-.icon{
-  width:15px;
-  height:15px;
-  display:inline-block;
-  vertical-align:-2px;
+
+/* Generic UI icon system */
+.ui-icon{
+  width:22px;
+  height:22px;
+  display:inline-grid;
+  place-items:center;
+  border:1px solid var(--line);
+  border-radius:50%;
+  background:rgba(255,255,255,.18);
+  flex:0 0 auto;
+}
+.ui-icon svg{
+  width:12px;
+  height:12px;
   fill:none;
   stroke:currentColor;
-  stroke-width:1.7;
+  stroke-width:1.8;
   stroke-linecap:round;
   stroke-linejoin:round;
-  flex:0 0 auto;
+}
+.ui-icon-plain{
+  width:20px;
+  height:20px;
+  border:0;
+  background:transparent;
 }
 .tiny-link,
 .underline-link,
@@ -133,24 +147,25 @@ body{
 .footer-actions a{
   display:inline-flex;
   align-items:center;
-  gap:7px;
+  gap:8px;
 }
 .project-arrow{
   display:flex;
-  align-items:center;
   justify-content:flex-end;
+  align-items:center;
 }
-.project-arrow .icon{
-  width:17px;
-  height:17px;
+.project-row:hover .ui-icon,
+.tiny-link:hover .ui-icon,
+.underline-link:hover .ui-icon,
+.project-link:hover .ui-icon,
+.footer-actions a:hover .ui-icon{
+  border-color:currentColor;
+  background:rgba(198,92,63,.08);
 }
 .dialog-close{
   display:grid;
   place-items:center;
-}
-.dialog-close .icon{
-  width:17px;
-  height:17px;
+  border-radius:50%;
 }
 .ticker-dot{
   width:3px;
@@ -158,5 +173,4 @@ body{
   border-radius:50%;
   background:var(--rust);
   display:inline-block;
-  margin:0 2px;
 }
